@@ -1,0 +1,91 @@
+/* Hamlet 폰트를 Google Fonts에서 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Hahmlet:wght@400;800&family=Monoton&display=swap');
+
+/* 폰트를 적용할 요소 선택자 및 중앙 정렬 */
+.typing-container {
+    display: flex;
+    flex-direction: column; /* 화면 크기가 작을 때 세로 정렬로 변경 */
+    align-items: center;
+    justify-content: center; /* 가로 중앙 정렬 추가 */
+    text-align: center; /* 텍스트 가로 중앙 정렬 추가 */
+    height: 60vh; /* 화면 높이의 100%만큼 설정하여 수직 중앙 정렬 */
+    font-family: 'Diphylleia', serif; /* Hamlet 폰트 적용 */
+    font-family: 'Hahmlet', serif;
+    font-family: 'Monoton', cursive;
+}
+
+.typing-effect {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 커서 효과 제거 */
+.typing-effect::after {
+    content: "";
+    display: inline-block;
+    width: 0; /* 커서 너비를 0으로 설정하여 숨김 */
+    height: 1em;
+    vertical-align: text-bottom;
+}
+
+.typing-image {
+    max-width: 200px; /* 이미지 너비 조정 */
+    margin-left: 20px; /* 이미지와 텍스트 간격 조정 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 스크롤 숨김 */
+    background-color: #f7f7f7; /* 배경색 지정 */
+}
+
+/* 화면이 충분히 큰 경우 스크롤 허용 */
+@media screen and (min-width: 600px) {
+    body {
+        overflow: auto; /* 스크롤 허용 */
+    }
+}
+
+/* 이전, 다음 버튼 스타일링 */
+.button-container {
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    margin-top: 10px;
+      
+    
+}
+.button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #000000;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 버튼 간격 추가 */
+.button + .button {
+    margin-left: 10px;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
